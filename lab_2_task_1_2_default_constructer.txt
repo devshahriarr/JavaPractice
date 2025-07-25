@@ -1,0 +1,37 @@
+class Rectangle {
+    public double length, width, height;
+    
+    // Default constructor
+    public Rectangle() {
+
+    }
+    
+    public Rectangle(double length, double width, double height) {
+        this.length = length;
+        this.width = width;
+        this.height = height;
+    }
+    
+    public double Area() {
+        return length * width;
+    }
+
+    public double Volume() {
+        return height * width * length;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        
+        Rectangle r1 = new Rectangle();
+        
+        r1.length = 2.0;
+        r1.width = 5.0;
+        r1.height = 3.0;
+        
+        // Print area and volume
+        System.out.println("Rectangle Area is: " + r1.Area());
+        System.out.println("Rectangle Volume is: " + r1.Volume());
+    }
+}

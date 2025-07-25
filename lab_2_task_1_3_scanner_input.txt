@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+class Rectangle {
+    public double length, width, height;
+    
+    public Rectangle(double length, double width, double height) {
+        this.length = length;
+        this.width = width;
+        this.height = height;
+    }
+    
+    public double Area() {
+        return length * width;
+    }
+
+    public double Volume() {
+        return height * width * length;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Take user input
+        System.out.print("Enter length: ");
+        double length = scanner.nextDouble();
+        System.out.print("Enter width: ");
+        double width = scanner.nextDouble();
+        System.out.print("Enter height: ");
+        double height = scanner.nextDouble();
+        
+        // Create Rectangle object with user input
+        Rectangle r1 = new Rectangle(length, width, height);
+        
+        // Print area and volume
+        System.out.println("Rectangle Area is: " + r1.Area());
+        System.out.println("Rectangle Volume is: " + r1.Volume());
+        
+        scanner.close();
+    }
+}

@@ -1,0 +1,54 @@
+class Shape{
+    private double length, width;
+    
+    public Shape(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+    
+    
+     public double getLength()
+    {
+        return length;
+    }
+     public double getWidth()
+    {
+        return width;
+    }
+    public void setLength(double length)
+    {
+        this.length = length;
+    }
+    public void setWidth(double width)
+    {
+        this.width = width;
+    }
+    
+}
+class Rectangle extends Shape{
+    
+    public Rectangle(double length, double width){
+        super(length, width);
+    }
+   
+    public double Area(){
+        return getLength() * getWidth(); 
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Rectangle r1 = new Rectangle(0, 0);
+        r1.setLength(5.00);
+        r1.setWidth(8.00);
+        System.out.println("Rectangle Area using Geter Seter: " + r1.Area() + "\n");
+        
+        Rectangle r2 = new Rectangle(5 , 4);
+
+        System.out.println("Rectangle Area using parametarized constructor: " + r2.Area() + "\n");
+    }
+}
+
+
+
+
